@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кликер</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f3f3f3;
+        }
+        h1 {
+            color: #333;
+        }
+        .coin {
+            width: 150px;
+            cursor: pointer;
+            margin: 20px auto;
+        }
+        .counter {
+            font-size: 24px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Жми если любишь маму</h1>
+    <img src="123.jpeg?text=Coin" alt="Coin" class="coin" onclick="addCoin()">
+    <p class="counter">Как сильно любишь: <span id="coinCount">0</span></p>
+    <script>
+        let coinCount = 0;
+
+        function addCoin() {
+            coinCount++;
+            document.getElementById('coinCount').innerText = coinCount;
+        }
+    </script>
+</body>
+</html>
